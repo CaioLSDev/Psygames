@@ -1,0 +1,1109 @@
+/*INICIO DO RESET*/
+
+html,body,div,span,iframe,h1,h2,h3,h4,h5,h6,p,a,address,em,img,strong,u,ol,ul,li,fieldset,form,label,legend,table,tbody,tfoot,
+thead,tr,th,td,main,article,aside, figure,figcaption,footer,
+header,nav,section,time,audio,video
+{
+  border:0;
+  font-size:100%;
+  font:inherit;
+  margin:0;
+  padding:0;
+}
+
+html
+{scroll-behavior:smooth;}
+
+body
+{
+  background:#fff;
+  color:#000;
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:12px;
+  line-height:1;
+}
+
+ol, ul, li
+{list-style:none;}
+
+a, a:hover
+{
+  color:#000;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+/* FIM DO RESET*/
+
+/* GLobais*/
+
+@font-face {
+    font-family: 'game';
+    src: url(../font/squids.otf);    
+}
+@font-face {
+    font-family: 'lemonr';
+    src: url(../font/lemonreg.otf);
+}
+@font-face {
+    font-family: 'lemonb';
+    src: url(../font/lemonbold.otf);
+}
+@font-face {
+    font-family: 'lemonbi';
+    src: url(../font/lemonboldIt.otf);
+}
+
+/* MOBILE (Base) */
+
+.container {
+    min-width: 370px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+body {
+    background-color: gray;
+}
+
+/* Topo */
+
+header {
+    display: flex; 
+}
+.nome {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 185px;
+}
+.nome img {
+    width: 100%;
+}
+header h1 {
+    color: chartreuse;
+    font-family: "game";
+    font-size: 120px;
+    position: absolute;
+    transform: rotate(-2deg);
+    top: 15%;
+    left: 65px;
+    text-shadow: 0px 0px 150px chartreuse;
+}
+header h2 {
+    color: rgb(255, 255, 255);
+    font-family: "game";
+    font-size: 30px;
+    position: absolute;
+    transform: rotate(-2deg);
+    top: 67%;
+    left: 120px;
+}
+
+header h1:hover {
+    color: rgb(216, 254, 27);
+    text-shadow: 0px 0px 200px chartreuse;
+    transform: scale(108%);
+    transition: 0.2s;
+}
+
+nav {
+    width: 100%;
+    height: 50px;
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2, 1, auto;
+    gap: 10px;
+}
+nav a {
+    width: 100%;
+    padding: 10px 2px;
+    margin: 0px 2px;
+    text-align: center;
+    background-color: white;
+    font-family: "lemonb";
+    font-size: 13px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.237);
+}
+nav a:hover {
+    background-color: rgb(254, 189, 27);
+    transform: scale(106%);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.495);
+    transition: 0.2s;
+}
+.oculto1 {
+    display: none;
+}
+.oculto2 {
+    display: none;
+}
+.dark {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 10px;
+    width: 100px;
+    margin-left: 20px;
+}
+.mini {
+    width: 150px;
+    margin-right: 20px;
+}
+
+/* Divisões */
+
+.divisao {
+    height: 50px;
+    color: rgb(0, 0, 0);
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "lemonb";
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.345);
+}
+.divisao:hover {
+    color: #fff;
+    transition: 0.2s;
+}
+main {
+    position: relative;
+}
+.menu {
+    display: none;
+}
+.menu ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 16px;
+    z-index: 10;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.638);
+}
+.menu li a {
+    display: block;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.348);
+    width: 100%;
+    padding: 17.5px 20px;
+    margin: 0px 2px;
+    text-align: center;
+    background-color:rgb(0, 0, 0);
+    font-family: "lemonb";
+    font-size: 13px;
+    
+}
+.menu a:hover {
+    background-color: rgb(254, 189, 27);
+    color: #000;
+    transform: scale(103%);
+}
+/* Fake Carousel */
+
+@keyframes ofertas{
+    10% {transform: translateY(0%)} 
+    20% {transform: translateY(-10%)} 
+    30% {transform: translateY(-20%)}    
+    40% {transform: translateY(-30%)} 
+    50% {transform: translateY(-40%)} 
+    60% {transform: translateY(-50%)} 
+    70% {transform: translateY(-60%)} 
+    80% {transform: translateY(-70%)} 
+    90% {transform: translateY(-80%)} 
+    100% {transform: translateY(-90%)} 
+}
+section {
+    width: 100%;
+    height: 200px;
+    overflow: hidden; 
+    background-color: rgb(255, 255, 255); 
+}
+.melhoresofertas {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    animation: ofertas 50s alternate infinite;
+    animation-delay: 3s;
+    display: flex;
+    justify-content: center;
+}   
+.melhoresofertas img {
+    width: 50%;
+    height: 200px;
+}
+.melhoresofertas a {
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.melhoresofertas p {
+    color: chartreuse;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 50%;
+    font-family: "lemonbi";
+    font-size: 54px;
+    text-shadow: 3px 3px 3px rgb(0, 0, 0);
+}
+
+/* cards */
+
+.cards {
+    width: 100%;
+    height: 100%;
+}
+
+.licards li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.cardspromo{
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background-color: chartreuse;
+}
+.imgbox img {
+    width: 100%;
+}
+.licards h2 {
+    display: block;
+    font-family: "lemonb";
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px ;
+    display: block;
+    transform: rotate(-2deg);   
+}
+.licards .sbt {
+    font-family: "lemonbi";
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    transform: rotate(-2deg);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.756);
+}
+.pcard {
+    text-align: center;
+    font-family: "lemonr";
+    font-size: 16px;
+    padding: 10px 20px 15px 10px;
+}
+.licards a {
+    padding: 10px 50px;
+    color: rgb(0, 0, 0);
+    font-family: "lemonb";
+    background-color: rgb(254, 189, 27);
+    font-size: 25px;
+    box-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+.cardspromo a:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    text-shadow: 0px 0px 4px black;
+    transform: scale(110%);
+    transition: 0.2s;
+}
+.licards span {
+    color: rgb(237, 49, 221);
+}
+
+.licards div:hover .sbt{
+    color: rgb(238, 76, 224);
+    transition: 0.4s;
+}
+
+
+/* Logo Assistência */
+
+.assist {
+    height: 100%;
+}
+
+.assist img {
+    width: 100%;
+    filter: saturate(50%);
+}
+.assist .max {
+    display: none;
+}
+.assist .min {
+    display: block;
+}
+.assist:hover img{
+    height: 100%;
+    filter: saturate(100%);
+    transition: 0.3s;
+}
+
+/* Ofertas Unicas */
+
+.cardshow {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    flex: 1, 1, auto;;
+}
+.cardshow img {
+    width: 95%;
+    border-radius: 50%;
+        position: absolute;
+        top: 23.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+}
+.cardpromo1{
+    width: 150px;
+    height: 330px;
+    background-color:rgb(254, 189, 27);
+    margin: 0px 5px;
+    box-shadow: 3px 3px 5px black;
+    position: relative;
+}
+.cardpromo1 h3{
+    position: absolute;
+    top: 49%;
+    font-family: "lemonb";
+    text-align: center;
+    font-size: 15px;
+    padding: 0px 10px;
+
+}
+.cardpromo1 p{
+    position: absolute;
+    top: 63%;
+    font-family: "lemonr";
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 5px 10px 5px;
+}
+.cardpromo1 a{
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5% 8%;
+    color: rgb(0, 0, 0);
+    font-family: "lemonb";
+    background-color: rgb(255, 255, 255);
+    font-size: 25px;
+    box-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.437); 
+}
+.cardpromo1:hover a{
+    color: rgb(0, 0, 0);
+    background-color:chartreuse;  
+}
+.cardpromo1:hover {
+    color: rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);  
+    transform: scale(103%);
+    margin: 0PX 5PX;
+    transition: 0.5s; 
+    box-shadow: 0px 0px 100px rgba(128, 255, 0, 0.24);
+}
+
+/* Novidades Gamer */
+
+.cardgamerbox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.cardgamer {
+    height: 240px;
+    background-color: chartreuse;
+    position: relative;
+}
+
+.cardgamerbox img{
+    width: 100%;
+}
+
+.cardgamer h3{
+    font-family: "Lemonb";
+    font-size: 35px;
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    top: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 5px black;
+
+}
+.cardgamer p{
+    font-family: "Lemonr";
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0px 0px;
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 90%;
+    top: 120px;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+}
+.cardgamer a{
+    font-family: "Lemonbi";
+    font-size: 25px;
+    padding: 10px;
+    background-color:rgb(254, 189, 27) ;
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 90%;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    box-shadow: 2px 2px 4px black;
+}
+.cardgamer:hover a{
+    color: rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);  
+}
+.cardgamer:hover {
+    color: rgb(0, 0, 0);
+    background-color:rgb(254, 189, 27);  
+    transition: 0.5s; 
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+footer div {
+    background-color: grey;
+    width: 100%;
+    height: 100%;  
+    display: flex;
+    flex-direction: column;
+}
+
+footer h3 {
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    width: 100%;
+    font-family: "lemonb";
+    font-size: 15px;
+    text-align: center;
+
+}
+footer a {
+    font-family: "lemonr";
+    font-size: 12px;
+    margin: 12px 20px; 
+}
+.contatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ico {
+    font-size: 15px;
+    padding: 0px 3px;
+}
+footer img {
+    width: 100%;
+    
+}
+address {
+    font-size: 8px;
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: #fff;
+    font-family: "lemonr";
+}
+footer p {
+    font-family: "lemonr";
+    font-size: 10px;
+    line-height: 18px;
+    padding: 0px 25px;
+    margin: 20px 0px;
+    text-align: center;
+}
+.login {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.login legend{
+    font-family: "game";
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: chartreuse;
+    box-shadow: 0px 0px 3px black;
+}
+.login label{
+    font-family: "lemonb";
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.login input{
+    font-family: "lemonr";
+    text-align: center;
+    font-size: 10px;    
+}
+.botao {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.botao input{
+    background-color: rgb(254, 189, 27);
+    font-family: "lemonb";
+    box-shadow: 0px 0px 3px black;
+    padding: 8px;
+    margin: 0px 5px 10px 5px;
+    border: 0;
+}
+.botao input:hover{
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.355);
+    transform: scale(110%);
+}  
+#loginpsy ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+#loginpsy li{ 
+    text-align: center;
+    justify-content: start;
+    padding: 3px 20px;
+}
+#cadastropsy ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+}
+#cadastropsy li{ 
+    text-align: center;
+    justify-content: start;
+    padding: 3px 20px;
+}
+#cadastropsy input{ 
+    font-size: 10px;
+    width: 250px;
+}
+.error {
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    font-size: 8px;
+    color: rgb(255, 0, 0);
+}
+
+
+/*TABLET*/ 
+
+@media (min-width: 800px) { 
+    
+/* Topo */
+
+     header {
+        height: 300px;
+    }
+    header h1 {
+        top: 25%;
+        left: 50px;
+    }
+    header h2 {
+        top: 59%;
+        left: 105px;
+    }
+    .nome {
+        overflow: hidden;
+        width: 100%;
+        height: 300px;
+    }
+    .nome img {
+        width: 100%;
+    }
+
+/* Nav */
+
+    .oculto1 {
+        display: block;
+    }
+    .menuhide {
+        display: none;
+    }
+    .menu ul {
+        flex-direction: row;
+        width: 100%;
+        left: -2px;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+        
+    }
+    .menu li {
+        width: 100%; 
+    }
+    .menu li a {
+        padding: 11px 50px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(0, 0, 0);
+        border: 5px solid chartreuse;
+    }
+    .menu a:hover {
+        background-color: rgb(254, 189, 27);
+        color: #000;
+        transform: scale(100%);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.304);
+    }
+    
+    
+/* Main / Fake Carousel */
+
+    main {
+        display: flex;
+    }
+    @keyframes ofertas2{
+        0% {transform: translateY(0%)} 
+        100% {transform: translateY(-75%)} 
+    }
+    section {
+        width: 20%;
+        height: 700px;
+    }
+    .rol {
+        margin-top: 50px;
+    }
+    .melhoresofertas {
+        align-items: center;
+        height:120%;
+        animation: ofertas2 30s alternate infinite;   
+    }
+ 
+    .melhoresofertas img {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .melhoresofertas p {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        opacity: 0;
+    }
+    .melhoresofertas p:hover {
+        opacity: 1;
+    }
+ 
+/* cards Semanais */
+    
+    .blk {
+        background-color: #000;
+        color: #fff;
+    }
+    .cards {
+        width: 80%;
+        height: 700px;
+        background-color: #000;
+    }
+    .imgbox {
+        width: 400px;
+        height: 200px;
+    }
+    .imgbox img{
+        height: 100%;
+    }
+    
+    .licards li{
+        flex-direction: row;
+        margin: 0px 12px 16px 12px;   
+    }
+    .cardspromo{
+        height: 200px;
+        width: 300px;
+    }
+    .licards h2 {
+        font-size: 22px; 
+        margin-top: 20px;   
+    }
+    .licards .sbt {
+        font-size: 25px;
+        margin-bottom: 7px;
+    }
+    .pcard {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+    .licards a {
+        color: rgb(0, 0, 0);
+        font-family: "lemonb";
+        background-color: rgb(254, 189, 27);
+        font-size: 18px;
+        box-shadow: 2px 2px 5px black;
+        display: block;
+        text-align: center;
+    }
+    .cardspromo a:hover {
+        color: rgb(255, 255, 255);
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.456);
+        transform: scale(110%);
+        transition: 0.2s;
+    }
+    .licards span {
+        color: rgb(237, 49, 221);
+    }
+    .licards div:hover .sbt{
+        color: rgb(238, 76, 224);
+        transition: 0.4s;
+    }
+    .licards li:hover {
+        transform: scale(105%);
+    }
+
+/* Logo Assistência */
+
+    .assist .max {
+        display: block;
+    }
+    .assist .min {
+        display: none;
+    }
+    .assist {
+        width: 100%;
+        height: 100%;
+        background-color: chartreuse;
+        padding: 50px 0px;
+    }
+    .assist img:hover {
+        height: 100%;
+        filter: saturate(100%);
+        transition: 0.3s;
+    }
+
+/* Ofertas Unicas */
+
+    .cardshow {
+        height: 500px;
+        background-color: #000000;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+    }
+    .cardshow img{
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        position: absolute;
+        top: 22%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    .cardpromo1{
+        width: 150px;
+        height: 350px;
+        background-color:rgb(254, 189, 27);
+        margin: 25px 0px;
+        box-shadow: 3px 3px 5px black;
+        position: relative;
+    }
+    .cardpromo1 h3{
+        position: absolute;
+        top: 46%;
+        width: 100%;
+        font-family: "lemonb";
+        text-align: center;
+        font-size: 15px;
+        padding: 0px 10px;
+    
+    }
+    .cardpromo1 p{
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        font-family: "lemonr";
+        text-align: center;
+        font-size: 13px;
+        padding: 10px 10px 10px 10px;
+
+    }
+    .cardpromo1 a{
+        position: absolute;
+        top: 91%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 10px;
+        color: rgb(0, 0, 0);
+        font-family: "lemonb";
+        background-color: rgb(255, 255, 255);
+        font-size: 25px;
+        box-shadow: 1px 1px 5px black;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.437); 
+    }
+    .cardpromo1:hover a{
+        color: rgb(0, 0, 0);
+        background-color:chartreuse;  
+        padding: 12px 10px; 
+    }
+    .cardpromo1:hover {
+        color: rgb(0, 0, 0);
+        background-color:rgb(255, 255, 255); 
+        margin: 0 30px; 
+        transform: scale(110%);
+        transition: 0.5s; 
+
+    }
+    
+/* Novidades Gamer */
+
+.cardgamerbox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+}
+.cardgamerbox ul{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0px 10px;
+}
+.cardgamerbox li{
+    width: 32%;
+    margin: 30px 10px;
+}
+
+.cardgamer {
+    height: 240px;
+    background-color: chartreuse;
+    position: relative;
+}
+.cardgamerbox img{
+    width: 100%;
+}
+.cardgamer h3{
+    font-size: 23px;
+    width: 100%;
+    top: 25px;
+}
+.cardgamer p{
+    font-size: 15px;
+    width: 90%;
+    top: 48%;
+}
+.cardgamer a{
+    width: 90%;
+    top: 85%;  
+}
+.cardgamerbox li:hover{
+transform: scale(103%);
+transition: 0.3s;
+}
+
+/* Footer */
+
+footer div {
+    width: 50%;
+    height: 220px;  
+}
+footer h3 {
+    padding: 12px;
+    font-size: 16px;
+}
+footer a {
+    margin: 10px 10%; 
+}
+.contatos {
+    flex-direction: column;
+}
+.ico {
+    font-size: 18px;
+    padding: 0px 7px;
+}
+footer img {
+    width: 100%;
+    
+}
+address {
+    font-size: 12px;
+    height: 50px;
+}
+footer p {
+    font-family: "lemonr";
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0px 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+}
+
+/*DESKTOP*/ 
+
+@media (min-width: 1200px){
+
+    /* Topo */
+
+    header h1 {
+        font-size: 150px;
+        top: 18%;
+        left: 60px;
+    }
+    header h2 {
+        font-size: 40px;
+        top: 60%;
+        left: 125px;
+    }
+    .oculto2 {
+        display: block;
+    }
+    .aparente {
+        display: none;
+    }
+    nav {
+        gap: 10px;
+        width: 1200px;
+        height: 60px;
+    }
+    .nav a {
+        margin: 0px 0px;
+    }
+    .dark {
+        width: 100%;
+    }
+    .mini {
+        width: 20%;
+    }
+    .menu {
+        display: none;
+    }
+    /* Divisões */
+
+    .divisao {
+        height: 55px;
+        font-size: 30px;
+    }
+
+    /* Cards da Semana */
+
+    .cardspromo{
+        width: 400px;
+    }
+    .licards h2 {
+        font-size: 25px;   
+    }
+    .licards .sbt {
+        font-size: 35px;
+    }
+    .pcard {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+    .licards a {
+        color: rgb(0, 0, 0);
+        font-family: "lemonb";
+        background-color: rgb(254, 189, 27);
+        font-size: 20px;
+        box-shadow: 2px 2px 5px black;
+        display: block;
+        text-align: center;
+        padding: 10px 75px;
+    }
+    .cardspromo a:hover {
+        color: rgb(255, 255, 255);
+        box-shadow: 2px 2px 5px rgb(0, 0, 0);
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.456);
+        transform: scale(110%);
+        transition: 0.2s;
+    }
+    .licards span {
+        color: rgb(237, 49, 221);
+    }
+    .licards div:hover .sbt{
+        color: rgb(238, 76, 224);
+        transition: 0.4s;
+    }
+    .licards li:hover {
+        transform: scale(105%);
+    }
+
+    /* Novidades Gamer */ 
+
+    .cardgamerbox {
+        height: 560px;
+    }
+    .cardgamer h3{
+        font-size: 35px;
+    }
+
+    /* Ofertas Unicas */
+
+    .cardshow img{
+        height: 240px;
+        width: 240px;
+        position: absolute;
+        top: 28%;
+    }
+    .cardpromo1{
+        width: 250px;
+        height: 450px;
+    }
+    .cardpromo1 h3{
+        top: 60%;
+        font-size: 20px;
+    }
+    .cardpromo1 p{
+        top: 71%;
+        font-size: 15px;
+    }
+    .cardpromo1 a{
+        top: 92%;
+        padding: 10px 40px;
+    }
+    .cardshow {
+        height: 600px;
+    }
+    .cardpromo1:hover a{
+        padding: 14px 45px;
+        transition: 0.3s; 
+}
+}
